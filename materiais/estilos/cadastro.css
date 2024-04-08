@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.cad-form {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--cor-superficie);
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cad-inp {
+    border-bottom: 2px solid var(--cor-2);
+    color: var(--cor-texto);
+    font-family: Sora;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: transparent;
+    width: 100%;
+    transition: border .3s ease-in-out;
+}
+
+.cad-inp:hover, .cad-inp:active, .cad-inp:focus {
+    border-color: var(--cor-1);
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.selector {
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    font-family: Sora;
+    justify-content: center;
+    color: var(--cor-texto);
+    background-color: var(--cor-2);
+}
+
+#foto-prod {
+    display: none;
+}

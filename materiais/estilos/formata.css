@@ -1,0 +1,277 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: rgb(27, 26, 29);
+    --cor-superficie: rgb(42, 37, 49);
+    --cor-texto: rgb(240, 226, 253);
+    --cor-1: rgb(157, 79, 230);
+    --cor-2: rgba(162, 52, 212, 0.3);
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Sora, sans-serif;
+    overflow-x: hidden;
+    /* height: 200vh; */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    border-bottom: 2px solid var(--cor-1);
+    padding: 25px;
+    background-color: var(--cor-fundo);
+    box-shadow: 0 15px 25px var(--cor-2);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#titulo {
+    color: var(--cor-1);
+    font-family: Sora;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 60px;
+}
+
+#top-icones {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#top-icones a {
+    border: 2px solid var(--cor-fundo);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--cor-1);
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all .3s ease-in-out;
+}
+
+#top-icones a:hover {
+    border: 2px solid var(--cor-1);
+    text-decoration: underline;
+    box-shadow: 0 0 20px var(--cor-2);
+}
+
+#top-icones a:active {
+    color: var(--cor-fundo);
+    background-color: var(--cor-1);
+}
+
+.icone-atual {
+    color: var(--cor-fundo) !important;
+    background-color: var(--cor-1) !important;
+}
+
+#busca {
+    border-bottom: 2px solid var(--cor-superficie);
+    padding: 10px 5px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .6s ease-in-out;
+}
+
+#busca-inp {
+    font-family: Sora;
+    font-size: 1.05em;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+}
+
+#busca:has(#busca-inp:hover, #busca-inp:active, #busca-inp:focus) {
+    border-bottom: 2px solid var(--cor-1);
+    width: 100%;
+}
+
+#busca-btn {
+    color: var(--cor-1);
+    font-size: 1.7em;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+#top-espaco {
+    width: 100vw;
+}
+
+
+h1 {
+    padding: 20px;
+    font-size: 2.7em;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    height: 87vh;
+    background-image: url(../imagens/main.jpg);
+    background-size: cover;
+    background-position: 0 20%;
+}
+
+.hero-container {
+    position: absolute;
+    top: 30%;
+    right: 05%;
+    width: 50%;
+    font-size: 2.5rem;
+    text-align: right;
+}
+
+.texto-destaque {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 15px var(--cor-fundo);
+}
+
+.link-cta {
+    color: var(--cor-1);
+    font-size: 1em;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-scd {
+    color: var(--cor-texto);
+    text-align: right;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: Sora, sans-serif;
+    font-weight: bold;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s ease-in-out;
+} 
+
+.btn-cta {
+    color: var(--cor-fundo);
+    background-color: var(--cor-1);
+}
+
+.btn-scd {
+    border: 2px solid var(--cor-1);
+    color: var(--cor-1);
+    background-color: var(--cor-superficie);
+}
+
+.btn:hover {
+    transform: scale(103%);
+    box-shadow: 0 0 15px var(--cor-2);
+}
+
+
+
+/* TABLET */
+@media only screen and (max-width: 1400px) {
+    header {
+        padding: 15px;
+    }
+    
+    header nav {
+        gap: 20px;
+    }
+
+    #titulo {
+        font-size: 1.6em;
+    }
+
+    .top-icone-label {
+        display: none;
+    }
+
+    #busca {
+        width: 100%;
+    }
+}
+
+/* CELULAR */
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #titulo {
+        font-size: 1.7em;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header nav {
+        width: 100%;
+        flex-direction: row-reverse;
+        gap: 25px;
+    }
+
+    .hero {
+        height: 70vh;
+        background-position: 55% 30%;
+    }
+
+    .hero-container {
+        padding: 20px;
+        top: inherit;
+        right: inherit;
+        bottom: 0;
+        width: 100%;  
+        backdrop-filter: blur(20px);
+        background-color: #0000002A;     
+    }
+    
+    .texto-destaque {
+        font-size: 2.2rem;
+        font-weight: bold;    
+    }
+
+    .cta-link {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Hort Suplementos</title>
+    <link rel="shortcut icon" href="../materiais/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../materiais/estilos/formata.css">
+    <link rel="stylesheet" href="../materiais/estilos/cadastro.css">
+    <script src="../materiais/codigos/util.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <a href="../" id="titulo"><ion-icon name="flash"></ion-icon> Hort Suplementos</a>
+        <nav>
+            <ul id="top-icones">
+                <li><a href="../galeria/"><ion-icon name="image"></ion-icon><span class="top-icone-label">Galeria</span></a></li>
+                <li><a href="../sacola/"><ion-icon name="bag-handle"></ion-icon><span class="top-icone-label">Sacola</span></a></li>
+                <li><a href="../cadastro/"><ion-icon name="person"></ion-icon><span class="top-icone-label">Cadastro</span></a></li>
+            </ul>
+            <form action=".php" method="get" id="busca">
+                <input type="search" name="busca-inp" id="busca-inp" placeholder="Busque aqui...">
+                <button type="submit" id="busca-btn"><ion-icon name="search-circle"></ion-icon></button>
+            </form>
+        </nav>
+    </header>
+
+    <div id="top-espaco"></div>
+
+    <main>
+        <h1>Cadastre um Produto</h1>
+        <section>
+            <form action="cad.php" class="cad-form">
+                <fieldset>
+                    <label for="cod-brr"><ion-icon name="barcode"></ion-icon>Código de Barras</label>
+                    <input type="text" name="cod-brr" id="cod-brr" class="cad-inp" required>
+                </fieldset>
+                <div class="form-row">
+                    <fieldset>
+                        <label for="custo"><ion-icon name="cash"></ion-icon>Custo</label>
+                        <input type="number" name="custo" id="custo" min="0" class="cad-inp" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="sbrnm"><ion-icon name="pricetag"></ion-icon>Venda</label>
+                        <input type="number" name="sbrnm" id="sbrnm" min="0" class="cad-inp" required>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <label for="estoque"><ion-icon name="cube"></ion-icon>Estoque</label>
+                    <input type="number" name="estoque" id="estoque" min="1" class="cad-inp" required>
+                </fieldset>
+                <fieldset>
+                    <label for="foto-prod"><ion-icon name="camera"></ion-icon>Foto do Produto</label>
+                    <label for="foto-prod" class="selector" id="selector">Selecionar foto...</label>
+                    <input type="file" accept="images/*" name="foto-prod" id="foto-prod" onchange="upFileBtn()" class="cad-inp">
+                </fieldset>
+
+                <button type="submit" class="btn btn-cta"><ion-icon name="checkmark-circle"></ion-icon>Cadastrar produto</button>
+                <button type="reset" class="btn btn-scd"><ion-icon name="close-circle"></ion-icon>Limpar dados</button>
+                <p class="links">
+                    <a href="#" class="link-scd">Política e Termos</a>
+                    <a href="../cadastro/" class="link-scd">Cadastro de Clientes</a>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
